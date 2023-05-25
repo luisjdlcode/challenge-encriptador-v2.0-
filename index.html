@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <title>Challenge de Encriptador </title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="Imagenes/Logo.svg" alt="logo">
+    </header>
+    <main>
+        <section class="seccion1">
+            <div class="contenedorTexto">
+
+                <textarea class="cajaTexto" name="resultado" id="textoEncriptado" placeholder="Ingrese el texto aqui" cols="30" rows="10"></textarea>
+            </div>
+            <div class="alerta">
+                <img src="Imagenes/alerta.svg" alt="alerta">
+                <p>Solo letras minusculas y sin acentos</p>
+            </div>
+            <div class="contenedorBotones">
+                <button type="button" class="btn-encriptar" id="botonEncriptado">Encriptar</button>
+                <button type="button" class="btn-desencriptar" id="botonDesencriptado">Desencriptar</button>
+            </div>
+        </section>
+        <section class="seccion2">
+
+            <div class="contenedorResultado" id="mostrarresultado">
+                
+                <textarea class="cajaResultado" name="resultado" id="textoDesencriptado"></textarea>
+            </div>
+            <div id="munieco" class="contenedorMunieco">
+                 <img src="Imagenes/Muñeco.svg" alt="munieco">
+            </div>
+            
+            <div id="parrafo" class="contenedorParrafo">
+                <h3>Ningun mensaje fue  <br> encontrado</h3>
+                <p>ingresar el texto que deseas encriptar o <br> desencriptar.</p>
+            </div>
+
+            <div class="contenedorCopiar">
+                <input type="button" class="btn-copiar" id="botonCopiar" value="Copiar"></input>
+            </div>
+
+        </section>
+        
+    </main>    
+    <footer>
+        <div>
+            <p>Todos los derechos reservados</p>
+            <p>proyecto realizado por : <b>Luis Diaz</b></p>
+        </div>
+        
+    </footer>
+</body>
+<script>
+    var btn = document.querySelector("#botonEncriptado");
+    btn.onclick = encriptar;
+
+    var btn2 = document.querySelector("#botonDesencriptado");
+    btn2.onclick = desencriptar;
+
+    var btn3 = document.querySelector("#botonCopiar");
+    btn3.onclick = copiar;
+</script>
+</html>
